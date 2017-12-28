@@ -1,8 +1,7 @@
 $(document).ready(function() {
     $.ajax({
-        url: "http://rest-service.guides.spring.io/greeting"
+        url: "https://g64vzck9m8.execute-api.eu-west-1.amazonaws.com/prod/list"
     }).then(function(data) {
-       $('.greeting-id').append(data.id);
-       $('.greeting-content').append(data.content);
+       $('.list').append(data);
     });
 })
