@@ -4,6 +4,17 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="rmcast_rest.js"></script>
 <script src="https://raw.githubusercontent.com/josepcn/mcast/master/jquery.dynatable.js" type = "text/javascript"></script>
+
+<script>
+	var $records = $('#json-records'),
+    myRecords = JSON.parse($records.text());
+$('#my-final-table').dynatable({
+  dataset: {
+    records: myRecords
+  }
+});
+</script>
+
 <head>
 	<title>Morning Podcasts</title>
 </head>
@@ -14,5 +25,16 @@ Morning Podcasts
 	<div>
 	    <p class="list">podcast list</p>
 	</div>
+
+	<table id="my-final-table">
+	<thead>
+		<th>Band</th>
+		<th>Song</th>
+	</thead>
+		<tbody>
+		</tbody>
+	</table>
+
+
 </body>
 </html>
