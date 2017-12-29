@@ -6,13 +6,24 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Dynatable/0.3.1/jquery.dynatable.js"></script>
 
 <script>
-	var $records = $('#json-records'),
-    myRecords = JSON.parse($records.text());
-$('#my-final-table').dynatable({
-  dataset: {
-    records: myRecords
-  }
-});
+	$.ajax({url: "demo_test.txt", success: function(result){
+        $("#div1").html(result);
+
+        myRecords = JSON.parse(result);
+		$('#my-final-table').dynatable({
+		  dataset: {
+		    records: myRecords
+		  }
+		});
+    }});
+
+	// var $records = $('#json-records'),
+ //    myRecords = JSON.parse($records.text());
+	// 	$('#my-final-table').dynatable({
+	// 	  dataset: {
+	// 	    records: myRecords
+	// 	  }
+	// });
 </script>
 
 <head>
