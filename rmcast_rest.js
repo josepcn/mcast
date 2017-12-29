@@ -4,7 +4,7 @@ $.ajax({url: "https://g64vzck9m8.execute-api.eu-west-1.amazonaws.com/prod/list",
 
 			$.each(result, function( index, value ) {
 				value['link'] = "http://www.google.com";
-			 	final_dataset.append(value);
+			 	final_dataset.push(value);
 			});
 
 			$('#my-final-table').dynatable(
