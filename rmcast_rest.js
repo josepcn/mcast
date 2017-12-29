@@ -1,9 +1,16 @@
 $.ajax({url: "https://g64vzck9m8.execute-api.eu-west-1.amazonaws.com/prod/list", 
 		success: function(result){
+			final_dataset = []
+
+			$.each(result, function( index, value ) {
+				value['link'] = "http://www.google.com"
+			 	final_dataset.append(value)
+			});
+
 			$('#my-final-table').dynatable(
 			{
 			  dataset: {
-			    records: result
+			    records: final_dataset
 			  },
 			  features: {
 			    paginate: false,
@@ -11,7 +18,6 @@ $.ajax({url: "https://g64vzck9m8.execute-api.eu-west-1.amazonaws.com/prod/list",
 			    recordCount: false,
 			    perPageSelect: false
 			  }
-
 			}
 			);
     }});
