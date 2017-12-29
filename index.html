@@ -2,28 +2,9 @@
 <!DOCTYPE html>
 <html>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="rmcast_rest.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Dynatable/0.3.1/jquery.dynatable.js"></script>
+<script src="rmcast_rest.js"></script>
 
-<script>
-	$.ajax({url: "https://g64vzck9m8.execute-api.eu-west-1.amazonaws.com/prod/list", 
-		success: function(result){
-	        //$("#div1").html(result);
-			$('#my-final-table').dynatable({
-			  dataset: {
-			    records: result
-			  }
-			});
-    }});
-
-	// var $records = $('#json-records'),
- //    myRecords = JSON.parse($records.text());
-	// 	$('#my-final-table').dynatable({
-	// 	  dataset: {
-	// 	    records: myRecords
-	// 	  }
-	// });
-</script>
 
 <head>
 	<title>Morning Podcasts</title>
@@ -38,8 +19,8 @@ Morning Podcasts
 
 	<table id="my-final-table">
 	<thead>
-		<th>Band</th>
-		<th>Song</th>
+		<th>show_id</th>
+		<th>name</th>
 	</thead>
 		<tbody>
 		</tbody>
