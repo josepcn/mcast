@@ -6,7 +6,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Dynatable/0.3.1/jquery.dynatable.js"></script>
 
 <script>
-	$.ajax({url: "demo_test.txt", success: function(result){
+	$.ajax({url: "https://g64vzck9m8.execute-api.eu-west-1.amazonaws.com/prod/list", success: function(result){
         $("#div1").html(result);
 
         myRecords = JSON.parse(result);
