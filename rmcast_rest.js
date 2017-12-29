@@ -3,8 +3,8 @@ $.ajax({url: "https://g64vzck9m8.execute-api.eu-west-1.amazonaws.com/prod/list",
 			final_dataset = []
 
 			$.each(result, function( index, value ) {
-				value['link'] = "http://www.google.com"
-			 	final_dataset.append(value)
+				value['link'] = "http://www.google.com";
+			 	final_dataset.append(value);
 			});
 
 			$('#my-final-table').dynatable(
